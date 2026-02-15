@@ -47,5 +47,15 @@ void main() {
         returnsNormally,
       );
     });
+
+    test('paint does not throw for all modes', () {
+      final size = const Size(800, 400);
+      for (final mode in MovementMode.values) {
+        final painter = BrockStringPainter(beadPosition: 0.5, mode: mode);
+        final recorder = PictureRecorder();
+        final canvas = Canvas(recorder);
+        expect(() => painter.paint(canvas, size), returnsNormally);
+      }
+    });
   });
 }

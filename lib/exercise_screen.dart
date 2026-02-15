@@ -225,8 +225,12 @@ class _BrockStringExerciseScreenState extends State<BrockStringExerciseScreen>
             runSpacing: 6,
             children: [
               _modeChip('Horizontal', MovementMode.horizontal),
+              _modeChip('Vertical', MovementMode.vertical),
               _modeChip('↘ Diagonal', MovementMode.diagonalTLBR),
               _modeChip('↙ Reverse', MovementMode.diagonalTRBL),
+              _modeChip('Ellipse', MovementMode.ellipse),
+              _modeChip('Circle', MovementMode.circle),
+              _modeChip('∞ Infinity', MovementMode.infinity),
             ],
           ),
         ],
